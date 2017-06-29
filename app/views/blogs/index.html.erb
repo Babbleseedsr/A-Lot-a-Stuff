@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Blogs</h1>
+<h2>Blogs</h2>
 
-<table>
+<hr>
+
   <thead>
     <tr>
       <th>Title</th>
@@ -11,19 +12,20 @@
     </tr>
   </thead>
 
-  <tbody>
+  <div>
     <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.body %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div>
+        <p><%= blog.title %></p>
+        <p><%= blog.body %></p>
+        <p><%= link_to 'Show', blog %></p>
+        <p><%= link_to 'Edit', edit_blog_path(blog) %></p>
+        <p><%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure about this?' } %></p>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+
+<hr>
 
 <br>
 
-<%= link_to 'New Blog', new_blog_path %>
+<%= link_to 'Create New Blog', new_blog_path %>
