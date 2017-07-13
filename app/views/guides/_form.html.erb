@@ -16,6 +16,11 @@
     <%= form.text_field :title, id: :guide_title %>
   </div>
 
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :guide_description %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
