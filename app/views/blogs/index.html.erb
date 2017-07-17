@@ -17,9 +17,9 @@
   <tbody>
     <% @blogs.each do |blog| %>
       <tr>
-        <%= image_tag blog.thumb_image unless blog.thumb_image.nil? %>
         <p><%= blog.title %></p>
         <p><%= blog.body %></p>
+        <%= image_tag blog.thumb_image unless blog.thumb_image.nil? %>
         <p><%= link_to blog.status, toggle_status_blog_path(blog) %></p>
         <p><%= link_to 'Show', blog %></p>
         <p><%= link_to 'Edit', edit_blog_path(blog) %></p>
