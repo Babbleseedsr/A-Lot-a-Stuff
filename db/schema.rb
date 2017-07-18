@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20170717153425) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
+    end
 
+  add_foreign_key "blogs", "topics"
 end

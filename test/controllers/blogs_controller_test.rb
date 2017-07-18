@@ -34,8 +34,8 @@ class BlogsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update blog" do
-    patch blog_url(@blog), params: { blog: { body: @blog.body, title: @blog.title } }
-    assert_redirected_to blog_url(@blog)
+    patch blog_path(@blog), params: { blog: { body: @blog.body, title: @blog.title } }
+    assert_redirected_to blog_path(@blog)
   end
 
   test "should destroy blog" do
