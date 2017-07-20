@@ -1,5 +1,5 @@
 class CreateTopics < ActiveRecord::Migration[5.1]
-  def change
+  def create
     create_table :topics do |t|
       t.string :title
 

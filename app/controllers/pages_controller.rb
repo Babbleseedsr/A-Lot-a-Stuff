@@ -5,8 +5,10 @@ class PagesController < ApplicationController
   end
 
   def about
+    about_path
   end
 
-  def contac
+  def contact
+    contact_path
   end
 end

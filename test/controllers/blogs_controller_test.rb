@@ -26,7 +26,7 @@ class BlogsControllerTest < ActionDispatch::IntegrationTest
   test "should show blog" do
     get blog_url(@blog)
     assert_response :success
-  end
+  end 
 
   test "should get edit" do
     get edit_blog_url(@blog)
@@ -34,9 +34,10 @@ class BlogsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update blog" do
-    patch blog_path(@blog), params: { blog: { body: @blog.body, title: @blog.title } }
-    assert_redirected_to blog_path(@blog)
+    patch blog_url(@blog), params: { blog: { body: @blog.body, title: @blog.title } }
+    assert_redirected_to @blog
   end
+
 
   test "should destroy blog" do
     assert_difference('Blog.count', -1) do
